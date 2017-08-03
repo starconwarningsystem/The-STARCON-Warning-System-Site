@@ -23,7 +23,7 @@
  .container { overflow: hidden; width: 100%; max-width: 960px; margin: 0 auto; }
  body.affix .cento-header .nav-wrap { position: fixed; top: 0; z-index: 15; border-bottom: 0px solid #f7f7f7; }
  #icontent .container { overflow: visible; }
- .cento-header { position: relative; z-index: 9; width: 100%; background: #ffffff; padding: 40px 0 0; box-sizing: border-box; }
+ .cento-header { position: relative; z-index: 9; width: 100%; background: #fefefe; padding: 40px 0 0; box-sizing: border-box; }
  .cento-header .logo { margin-bottom: 20px; }
  .cento-header .logo img { display: block; max-width: 200px; }
  .cento-header .logo #wsite-title { display: block; max-width: 500px; }
