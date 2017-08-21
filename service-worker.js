@@ -1,4 +1,4 @@
-var cacheName = 'STARCON-2017-08-21-19-15';
+var cacheName = 'STARCON-2017-08-21-19-25';
 var filesToCache = [
   '/',
   '/index.html',
@@ -17,7 +17,6 @@ var filesToCache = [
   '/files/theme/external/main.js',
   '/files/theme/custom.js',
   '/files/theme/plugins.js',
-  '/activateserviceworker.js',
   '/files/theme/external/regular.ttf',
   '/uploads/images/starcon.png',
   '/manifest.json'
@@ -48,17 +47,8 @@ self.addEventListener('install', function(e) {
   );
 });
 
-self.addEventListener('fetch', function(e) {
-  console.log('[ServiceWorker] Fetch', e.request.url);
-  e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
-    })
-  );
-});
-
 self.addEventListener('activate', function(e) {
-  var cacheWhitelist = ['STARCON-2017-08-21-19-15'];
+  var cacheWhitelist = ['STARCON-2017-08-21-19-25'];
   console.log('[ServiceWorker] Activate');
   e.waitUntil(
     caches.keys().then(function(cacheNames) {
@@ -67,6 +57,15 @@ self.addEventListener('activate', function(e) {
           console.log('[ServiceWorker] Removing old cache', cacheName);
           return caches.delete(cacheName);
       }}))
+    })
+  );
+});
+
+self.addEventListener('fetch', function(e) {
+  console.log('[ServiceWorker] Fetch', e.request.url);
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
     })
   );
 });
