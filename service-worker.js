@@ -1,4 +1,4 @@
-var cacheName = 'STARCON-2017-08-21-19-40';
+var cacheName = 'STARCON-2017-08-21-20-55';
 var filesToCache = [
   '/',
   '/index.html',
@@ -35,7 +35,6 @@ self.addEventListener('install', function(e) {
     caches.open(cacheName).then(function(cache) {
       console.log('[ServiceWorker] Caching app shell');
       return cache.addAll(filesToCache);
-	  // Caching external files in next 5 lines
       var request = new Request(urlToCache, {mode: 'no-cors'});
       return fetch(request).then(function(response) {
         var cachedCopy = response.clone();
@@ -48,7 +47,7 @@ self.addEventListener('install', function(e) {
 });
 
 self.addEventListener('activate', function(e) {
-  var cacheWhitelist = ['STARCON-2017-08-21-19-40'];
+  var cacheWhitelist = [cacheName];
   console.log('[ServiceWorker] Activate');
   e.waitUntil(
     caches.keys().then(function(cacheNames) {
@@ -59,6 +58,7 @@ self.addEventListener('activate', function(e) {
       }}))
     })
   );
+  return self.clients.claim();
 });
 
 self.addEventListener('fetch', function(e) {
