@@ -1,4 +1,5 @@
 (function() {
+
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
       navigator.serviceWorker.register('/service-worker.js', {Cache: "max-age=0"}).then(function(registration) {
