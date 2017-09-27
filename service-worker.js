@@ -1,4 +1,4 @@
-var cacheName = 'STARCON-2017-09-24-20-50';
+var cacheName = 'STARCON-2017-09-27-18-10';
 var filesToCache = [
   '/',
   '/index.html',
