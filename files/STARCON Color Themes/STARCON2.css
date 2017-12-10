@@ -243,7 +243,7 @@ body.affix .cento-header .nav-wrap {
             .nav ul li a {
                 display: block;
                 padding: 5px 15px;
-                color: #3a3921;
+                color: #331100;
                 text-transform: uppercase;
                 letter-spacing: .07em;
                 font-family: 'Quattrocento Sans', sans-serif;
@@ -271,8 +271,8 @@ body.affix .cento-header .nav-wrap {
 }
 
     #wsite-menus .wsite-menu li a {
-        background: #fff200;
-        color: #3a3921;
+        background: #f29610;
+        color: #331100;
         border: none;
         border-bottom: 1px solid #3a3921;
         text-transform: uppercase;
@@ -284,13 +284,13 @@ body.affix .cento-header .nav-wrap {
     }
 
     #wsite-menus .wsite-menu li a:hover {
-        color: #333322;
-        background: #ffffdd;
+        color: #332a22;
+        background: #ffeedd;
     }
 
         #wsite-menus .wsite-menu li a:hover .wsite-menu-arrow:before {
-            color: #333322;
-            background: #ffffdd;
+            color: #332a22;
+            background: #ffeedd;
         }
 
 #wsite-menus .wsite-menu-arrow {
