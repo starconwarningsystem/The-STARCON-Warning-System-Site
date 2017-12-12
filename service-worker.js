@@ -1,4 +1,4 @@
-var cacheName = 'STARCON-2017-12-12-15-15';
+var cacheName = 'STARCON-2017-12-12-15-20';
 var filesToCache = [
     '/',
     '/index.html',
@@ -19,7 +19,8 @@ var filesToCache = [
     '/files/theme/plugins.js',
     '/files/theme/external/regular.ttf',
     '/uploads/images/starcon.png',
-    '/manifest.json'
+    '/manifest.json',
+    '/ISPError.html'
 ];
 
 var urlToCache = [
